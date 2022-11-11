@@ -1,4 +1,5 @@
 <?php
+ 
   include_once('../components/header.php');
   if(isset($_SESSION['verified_user_id'])){
     $_SESSION['status'] = "You are already logged in";
@@ -7,11 +8,13 @@
 
   include_once('./authentication.php');
   $pdo = require_once('../database.php');
+  
+  $verified_number;
 
-
-  $verified_number = $_POST['verified'];
-
-  if($verified_number == 'Phone Number Verified'){
+  
+  if(isset($_POST['home'])){
+    
+    $verified_number = $_POST['uname'];
     $email = $_SESSION['email'];
     $statement = $pdo->prepare("INSERT INTO verified_user (phone_number,email)
                 VALUES (:phone_number, :email)");
@@ -20,6 +23,7 @@
 
         $statement->execute();
         header('Location: ./home.php');
+    
   }
 ?>
 
@@ -28,7 +32,7 @@
    <form method="post">
 
     <h3>Phone Number Verification</h3>
-    <input class="text-danger text-center" type="text" name="verified" value="Phone number unverified" id="verified">
+    
 
     <div class="formcontainer">
     <hr/>
@@ -37,25 +41,23 @@
       <input type="text" id="number" placeholder="Enter phone number" name="uname" required>
     </div>
     <div id="recaptcha-container"></div>
-    <button type="button" onclick="phoneAuth();">Send Otp</button>
-   </form>
-
-  <form>
-
+    <button type="button" name="send" onclick="phoneAuth();">Send Otp</button>
+  
+    
     <h4 class="text-center">Verify OTP</h4>
     <div class="formcontainer">
     <hr/>
     <div class="container">
-    <input type="text" id="verificationCode" placeholder="Enter verification code">
+    <input type="text" id="verificationCode" placeholder="Enter verification code" required>
     
     </div>
   
-    <button type="button" onclick="codeverify();">Verify code</button>
+    <button type="button" name="verified" onclick="codeverify();">Verify code</button>
+ 
+    <input class="text-danger text-center" name="verified_text" type="text" value="Phone Number Unverified" id="verified">
+    <button id="home" name="home" class="btn btn-primary d-none" type="submit">Go to home</button> 
 
-   
-  
   </form>
-
 
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
   <script>
@@ -106,11 +108,15 @@
 
 
           coderesult.confirm(code).then(function(result) {
+
               alert("Successfully registered");
               var user = result.user;
               let message = document.getElementById('verified');
               message.classList.remove("text-danger");
               message.classList.add("text-success");
+              document.getElementById('home').classList.remove('d-none');
+              document.getElementById('home').classList.remove('d-block');
+
               message.value = "Phone Number Verified";
               // redirect();
 
