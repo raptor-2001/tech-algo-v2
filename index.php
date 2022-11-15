@@ -22,7 +22,7 @@
         <a class="nav-link" href="#">Technologies</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">Profile</a>
+        <a class="nav-link" href="./pages/profile.php">Profile</a>
       </li>
       <li class="nav-item pl-5">
         <form action="./pages/userLogin.php">
