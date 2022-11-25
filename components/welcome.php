@@ -1,133 +1,218 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <style>
-  .mouse {
-    transform: rotate(90deg);
-    background-color: black;
-  }
+.navbar .nav-link{
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
 
-  .price-table:hover {
-    box-shadow: 5px 5px 5px lightgrey, -5px 0px 5px lightgrey;
-  }
+.navbar .nav-item.active{
+  border-left: 4px solid #444;
+}
 
-  .modal-header {
-    background-color: #5FCF80;
+.carousel-item{
+  height: 450px;
+  background-color: black;
+}
 
-  }
+.carousel-image-1{
+  background: url('/img/showcasebg.jpg');
+  background-size: cover;
+}
+.carousel-image-2{
+  background: url('/img/showcasebg.jpg');
+  background-size: cover;
+}
+.carousel-image-3{
+  background: url('/img/showcasebg.jpg');
+  background-size: cover;
+}
 
-  .mybutton {
-    border-radius: 0px 40px 40px 0px;
-    background-color: #5FCF80;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 10px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
+#home-heading{
+  position: relative;
+  min-height: 200px;
+  background: url(/img/lights.jpg);
+  background-attachment: fixed ;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+}
 
-  .mybutton span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
+.dark-overlay{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+#showcase{
+  background-color: blueviolet;
+}
 
-  .mybutton span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .mybutton:hover span {
-    padding-right: 25px;
-  }
-
-  .mybutton:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
 </style>
+  <!-- SHOWCASE SLIDER -->
+  <section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-image-1 active">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block text-right mb-5">
+              <h1 class="display-3">Join Us</h1>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora accusamus maxime amet? Ullam nesciunt nulla unde minima in. Corporis?</p>
+              <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-image-2">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block mb-5">
+              <h1 class="display-3">Algorithms</h1>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora accusamus maxime amet? Ullam nesciunt nulla unde minima in. Corporis?</p>
+              <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-image-3">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block text-right mb-5">
+              <h1 class="display-3">Technologies</h1>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora accusamus maxime amet? Ullam nesciunt nulla unde minima in. Corporis?</p>
+              <a href="#" class="btn btn-success btn-lg">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#myCarousel" data-slide-to="prev" class="carousel-control-prev"><span class="carousel-control-prev-icon"></span></a>
+      <a href="#myCarousel" data-slide-to="next" class="carousel-control-next"><span class="carousel-control-next-icon"></span></a>
+    </div>
+  </section>
 
+  <!-- BOXES -->
+  <section id="boxes" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card text-center border-primary mb-resp">
+            <div class="card-body">
+              <div class="text-primary">Be Better</div>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center bg-primary text-white mb-resp">
+            <div class="card-body">
+              <div>Be Smarter</div>
+              <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center border-primary mb-resp">
+            <div class="card-body">
+              <div class="text-primary">Be Faster</div>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center bg-primary text-white">
+            <div class="card-body">
+              <div>Be Stronger</div>
+              <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / WHY SECTION  -->
+  <section id="about" class="py-5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-primary pb-3">
+              About This Website
+            </h1>
+            <p class="lead pb-3">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis aspernatur vel fugiat officia aperiam perspiciatis.
+            </p>
+          </div>
+
+          <!-- ACCORDION -->
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <div href="#collapse1" data-toggle="collapse" data-parent="#accordian">
+                    <i class="fas fa-arrow-circle-down"></i>Get Inspired
+                  </div>
+                </h5>
+              </div>
+
+              <div id="collapse1" class="collapse">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos unde asperiores dignissimos error aperiam, exercitationem perferendis voluptatum, ea harum enim modi corrupti illum? Fugit rem quisquam quaerat magni iure enim inventore accusamus, accusantium odio velit ex saepe natus similique perferendis ipsa, repudiandae error eligendi incidunt tempore doloribus dignissimos eius?
+                </div>
+              </div>
+
+              <div id="collapse1" class="collapse">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos unde asperiores dignissimos error aperiam, exercitationem perferendis voluptatum, ea harum enim modi corrupti illum? Fugit rem quisquam quaerat magni iure enim inventore accusamus, accusantium odio velit ex saepe natus similique perferendis ipsa, repudiandae error eligendi incidunt tempore doloribus dignissimos eius?
+                </div>
+              </div>
+
+
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <div href="#collapse2" data-toggle="collapse" data-parent="#accordian">
+                    <i class="fas fa-arrow-circle-down"></i>Gain Knowledge
+                  </div>
+                </h5>
+              </div>
+
+              <div id="collapse2" class="collapse ">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos unde asperiores dignissimos error aperiam, exercitationem perferendis voluptatum, ea harum enim modi corrupti illum? Fugit rem quisquam quaerat magni iure enim inventore accusamus, accusantium odio velit ex saepe natus similique perferendis ipsa, repudiandae error eligendi incidunt tempore doloribus dignissimos eius?
+                </div>
+              </div>
+
+              <div id="collapse2" class="collapse">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos unde asperiores dignissimos error aperiam, exercitationem perferendis voluptatum, ea harum enim modi corrupti illum? Fugit rem quisquam quaerat magni iure enim inventore accusamus, accusantium odio velit ex saepe natus similique perferendis ipsa, repudiandae error eligendi incidunt tempore doloribus dignissimos eius?
+                </div>
+              </div>
 
   
-  <div class="banner">
-    <div class="bg-color">
-      <div class="container">
-        <div class="row">
-          <div class="banner-text text-center">
-            <div class="text-border">
-              <h2 class="text-dec">Compare N Learn</h2>
             </div>
-            <div class="intro-para text-center quote">
-              <p class="big-text">Get easy access to the number of algorithms</p>
-              <p class="small-text">An easy and organized way to explore the world of coding through the window of our website</p>
-              <a href="#footer" class="btn get-quote">GIVE A SUGGESTION</a>
-            </div>
-            <a href="#feature" class="mouse-hover">
-              <div class="mouse"></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Banner-->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <div href="#collapse3" data-toggle="collapse" data-parent="#accordian">
+                    <i class="fas fa-arrow-circle-down"></i>Open Your Mind  
+                  </div>
+                </h5>
+              </div>
 
+              <div id="collapse3" class="collapse">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos unde asperiores dignissimos error aperiam, exercitationem perferendis voluptatum, ea harum enim modi corrupti illum? Fugit rem quisquam quaerat magni iure enim inventore accusamus, accusantium odio velit ex saepe natus similique perferendis ipsa, repudiandae error eligendi incidunt tempore doloribus dignissimos eius?
+                </div>
+              </div>
 
-
-  <!--Feature-->
-  <section id="feature" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="header-section text-center">
-          <h2>Features</h2>
-          <p>We try to provide our loyal users a rich and soothing experience in their path of learning<br>We do our best, but suggestions are welcomed.</p>
-          <hr class="bottom-line">
-        </div>
-        <div class="feature-info">
-          <div class="fea">
-            <div class="col-md-4">
-              <div class="heading pull-right">
-                <h4>Best Algorithm Comparison</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam amet, exercitationem possimus repudiandae iusto minus! Non provident voluptatibus tempora similique?</p>
-              </div>
-              <div class="fea-img pull-left">
-                <i class="fa fa-html5"></i>
-              </div>
-            </div>
-          </div>
-          <div class="fea">
-            <div class="col-md-4">
-              <div class="heading pull-right">
-                <h4>Updated Latest Algorithms</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aperiam, voluptates possimus esse doloremque laudantium non quo quidem in magnam.</p>
-              </div>
-              <div class="fea-img pull-left">
-                <i class="fa fa-drupal"></i>
-              </div>
-            </div>
-          </div>
-          <div class="fea">
-            <div class="col-md-4">
-              <div class="heading pull-right">
-                <h4>Open for contribution</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, laborum! Obcaecati quod sunt perspiciatis, perferendis facere voluptatibus illo ex sequi, earum dolore atque sit ipsa.</p>
-              </div>
-              <div class="fea-img pull-left">
-                <i class="fa fa-css3"></i>
+              <div id="collapse3" class="collapse">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos unde asperiores dignissimos error aperiam, exercitationem perferendis voluptatum, ea harum enim modi corrupti illum? Fugit rem quisquam quaerat magni iure enim inventore accusamus, accusantium odio velit ex saepe natus similique perferendis ipsa, repudiandae error eligendi incidunt tempore doloribus dignissimos eius?
+                </div>
               </div>
             </div>
           </div>
@@ -135,253 +220,230 @@
       </div>
     </div>
   </section>
-  <!--/ feature-->
 
-
-
-
-
-
-
-
-
-  <!--work-shop-->
-  <section id="work-shop" class="section-padding">
+  <!-- AUTHORS -->
+  <section id="authors" class="my-5 text-center">
     <div class="container">
       <div class="row">
-        <div class="header-section text-center">
-          <h2>Technologies</h2>
-          <p>Some of the high demand technologies.</p>
-          <hr class="bottom-line">
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="service-box text-center">
-            <div class="icon-box">
-              <i class="fa fa-html5 color-green"></i>
-            </div>
-            <div class="icon-text">
-              <h4 class="ser-text">HTML5</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="service-box text-center">
-            <div class="icon-box">
-              <i class="fa fa-css3 color-green"></i>
-            </div>
-            <div class="icon-text">
-              <h4 class="ser-text">CSS3</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="service-box text-center">
-            <div class="icon-box">
-              <i class="fa fa-joomla color-green"></i>
-            </div>
-            <div class="icon-text">
-              <h4 class="ser-text">Joomla</h4>
-            </div>
-          </div>
-          <br>
-          <!--            <input class="cta-2-form-submit-btn" value="See more..." type="submit" style="float: right">-->
-          <button class="mybutton" style="float: right;"><span><a href="courses.php" style='text-decoration:none;color:white;'>More..</a></span></button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ work-shop-->
-
-
-  <!--Testimonial-->
-  <section id="testimonial" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="header-section text-center">
-          <h2 class="white">See What Our Viewers Are Saying?</h2>
-          <p class="white">Thanks to our loyal viewers and to their Suggestions<br> It means a lot to us.</p>
-          <hr class="bottom-line bg-white">
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="text-comment">
-            <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-            <p class="text-name">Abraham Doe - Creative Dırector</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="text-comment">
-            <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-            <p class="text-name">Abraham Doe - Creative Director</p>
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-primary pb-3">
+              Meet Our Team
+            </h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dicta illum libero nam magnam sequi?
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <!--Team member-->
-  <section id="faculity-member" class="section-padding">
-    <div class="container">
       <div class="row">
-        <div class="header-section text-center">
-          <h2>Meet Our Team Member</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-          <hr class="bottom-line">
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <div class="pm-staff-profile-container">
-            <div class="pm-staff-profile-image-wrapper text-center">
-              <div class="pm-staff-profile-image">
-                <img src="assets/images/avatars/3.jpg" alt="" class="img-thumbnail img-circle" />
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h3>Dr. A. J. Umbarkar</h3>
+              <h5 class="text-muted">Project Guide</h5>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="http://facebook.com">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>  
+                </div>
               </div>
             </div>
-            <div class="pm-staff-profile-details text-center">
-              <p class="pm-staff-profile-name">Mr. Ankur Singh</p>
-              <p class="pm-staff-profile-title">Team Lead</p>
-
-              <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h3>Mr. Ankur Singh</h3>
+              <h5 class="text-muted">Team Lead</h5>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="http://facebook.com">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>  
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <div class="pm-staff-profile-container">
-            <div class="pm-staff-profile-image-wrapper text-center">
-              <div class="pm-staff-profile-image">
-                <img src="assets/images/avatars/2.jpg" alt="" class="img-thumbnail img-circle" />
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h3>Mr. Pratap Shingane</h3>
+              <h5 class="text-muted">Backend Developer</h5>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="http://facebook.com">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>  
+                </div>
               </div>
-            </div>
-            <div class="pm-staff-profile-details text-center">
-              <p class="pm-staff-profile-name">Mr. Pratap Shingane</p>
-              <p class="pm-staff-profile-title">Backend Developer</p>
-
-              <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <div class="pm-staff-profile-container">
-            <div class="pm-staff-profile-image-wrapper text-center">
-              <div class="pm-staff-profile-image">
-                <img src="assets/images/avatars/1.jpg" alt="" class="img-thumbnail img-circle" />
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h3>Mr. Pratham Yadav</h3>
+              <h5 class="text-muted">Front End Developer</h5>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="http://facebook.com">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>  
+                </div>
               </div>
-            </div>
-            <div class="pm-staff-profile-details text-center">
-              <p class="pm-staff-profile-name">Mr. Pratham Yadav</p>
-              <p class="pm-staff-profile-title">Frontend Developer</p>
-
-
-
-              <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!--/ Faculity member-->
 
-
-  <!--Contact-->
-  <section id="contactus" class="section-padding">
+  <!-- CONTACT -->
+  <section id="contact" class="bg-light py-5">
     <div class="container">
       <div class="row">
-        <div class="header-section text-center">
-          <h2>Contact Us</h2>
-          <p>All the user visiting the website can contact us any any time by sending their message </p>
-          <p>We will do our best to solve your queries</p>
-          <hr class="bottom-line">
+        <div class="col-lg-9">
+          <h3>Get In Touch</h3>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolores, voluptas aut distinctio officia fuga.</p>
+          <form>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Email">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-pencil-alt"></i>
+                </span>
+              </div>
+              <textarea class="form-control" placeholder="Message"></textarea>
+            </div>
+              <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+          </form>
         </div>
-
-
-        <form action="contact.php" method="get">
-          <div class="col-md-6 col-sm-6 col-xs-12 left">
-            <div class="form-group">
-              <input type="text" name="fullname" class="form-control form " placeholder="Your Name" />
-
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" />
-
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" />
-
-            </div>
-          </div>
-
-          <div class="col-md-6 col-sm-6 col-xs-12 right">
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-
-            </div>
-          </div>
-
-          <div class="col-xs-12">
-
-            <input type="submit" class="form contact-form-button light-form-button oswald light" value="Send message">
-          </div>
-        </form>
-        <!--          MESSAGE FORM-->
+        <div class="col-lg-3 align-self-center">
+          <img src="img/mlogo.png" alt="" class="img-fluid">
+        </div>
       </div>
     </div>
   </section>
-  <!--/ Contact-->
 
-
-  <!--Footer-->
-  <footer id="footer" class="footer">
-    <div class="container text-center">
-
-      <h3>Suggestions Are Welcomed</h3>
-
-      <form class="mc-trial row" action="review.php" method="get">
-        <div class="form-group col-md-3 col-md-offset-2 col-sm-4">
-          <div class=" controls">
-            <input name="username" placeholder="Enter Your FullName" class="form-control" type="text">
-          </div>
-        </div>
-        <!-- End email input -->
-        <div class="form-group col-md-3 col-sm-4">
-          <div class=" controls">
-            <input name="comment" placeholder="Enter Your Suggestion" class="form-control" type="text">
-          </div>
-        </div>
-        <!-- End email input -->
-        <div class="col-md-2 col-sm-4">
-          <p>
-            <button name="submit" type="submit" class="btn btn-block btn-submit">
-              Suggest this! <i class="fa fa-arrow-right"></i></button>
+  <!-- FOOTER -->
+  <footer id="main-footer" class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 ml-auto">
+          <p class="lead">
+            Copyright &copy; <span id="year"></span>
           </p>
         </div>
-      </form>
-      <!-- End newsletter-form -->
-      <ul class="social-links">
-        <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-google-plus fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-dribbble fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
-      </ul>
-      ©2022 Tech Algo All rights reserved
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Mentor
-        -->
-        Designed by <a href="https://amoldalwai.com/">Group 7</a>
       </div>
     </div>
   </footer>
-  <!--/ Footer-->
+  <!-- Main Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+
+  <!-- Bootstarp JS CDN -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"></script>
 
 
-</html>
+  <!-- Custom Script -->
+  <script>
+    // 
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({target:'#main-nav'});
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function(event){
+      if(this.hash !== ""){
+        event.preventDefault();
+        const hash = this.hash;
+        $('html,body').animate({
+          scrollTop: $(hash).offset().top
+        },800,function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+
+    // Configure Slider
+    $('.carousel').carousel({
+      interval: 6000,
+      pause: 'hover'
+      
+    });
+
+  </script>

@@ -24,8 +24,8 @@
 
 
   }else{
-    $_SESSION['status'] = "Login to access Home Page";
-    header("Location: login.php");  
+    $_SESSION['status'] = "Login to access the page";
+    header("Location: userLogin.php");  
     exit();
   }
 ?>
