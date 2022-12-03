@@ -27,61 +27,80 @@
   $role = $user[0][3];
   
 
+  $title = $_POST['title'] ?? null;
+  $techDetails = $pdo->prepare('SELECT * FROM technologies where title = :title');
+  $techDetails->bindValue(':title',$title);
+  $techDetails->execute();
+  $tech = $techDetails->fetchAll();
+  $creator = $tech[0][0] ?? $email;
+  $category = $tech[0][6];
+  $description = $tech[0][3];
+  $system = $tech[0][4];
+  $invented = $tech[0][5];
 
-  if(isset($_POST['addalgo'])){
-      $title = $_POST['title'];
+  if(isset($_POST['edittech'])){
+      $title1 = $_POST['newTitle'];
       $description = $_POST['editor1'];
-      $time = $_POST['time'];
-      $space = $_POST['space'];
+      $system = $_POST['system'];
+      $invented = $_POST['invented'];
       $category = $_POST['category'];
 
-      $statement = $pdo->prepare("INSERT INTO algorithm (creator,role,title,category,description,time_complexity,space_complexity)
-                  VALUES (:creator,:role,:title,:category,:description,:time,:space)");
+      $statement = $pdo->prepare("UPDATE technologies 
+      set creator = :creator,
+          role = :role,
+          title = :title,
+          description=:description,
+          system=:system,
+          invented=:invented,
+          category=:category
+      where title = :title");
       $statement->bindValue(':creator', $creator);
       $statement->bindValue(':role', $role);
-      $statement->bindValue(':title', $title);
+      $statement->bindValue(':title', $title1);
+      $statement->bindValue(':Oldtitle', $title);
       $statement->bindValue(':category', $category);
       $statement->bindValue(':description', $description);
-      $statement->bindValue(':time', $time);
-      $statement->bindValue(':space', $space);
+      $statement->bindValue(':system', $system);
+      $statement->bindValue(':invented', $invented);
       
   
       $statement->execute();
-      header("Location: ./algorithm.php");
+      header("Location: ./technology.php");
     
   }
 ?>
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Add Algorithm</h4>
+    <h4 class="text-center text-secondary">Edit technology</h4>
         <form method="Post">
           <div class="form-group">
             <label for="title">Title
-              <input name="title" type="text" class="form-control">
+              <input name="newTitle" type="text" class="form-control" value="<?php echo $title ?>">
             </label>
           </div>
           <div class="form-group">
             <label for="body">Description</label>
-            <textarea name="editor1" class="form-control"></textarea>
+            <textarea name="editor1" class="form-control"><?php echo $description ?></textarea>
           </div>
           <div class="form-group">
             <label for="category">Category
-              <input name="category" type="text" class="form-control">
+              <input value="<?php echo $category ?>" name="category" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
-            <label for="time">Time Complexity
-              <input name="time" type="text" class="form-control">
+            <label for="system">System 
+              <span class="text-muted">(Linux/Windows/Mac/All)</span> 
+              <input value="<?php echo $system ?>" name="system" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
-            <label for="space">Space Complexity
-              <input name="space" type="text" class="form-control">
+            <label for="space">Invented By
+              <input value="<?php echo $invented ?>" name="invented" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
-            <button type="submit" name="addalgo" class="btn text-white btn-warning btn-block">Add</button>
+            <button type="submit" name="edittech" class="btn text-white btn-warning btn-block">Submit</button>
           </div>
         </form>
   </div>  

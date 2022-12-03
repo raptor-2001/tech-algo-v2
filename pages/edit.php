@@ -27,19 +27,37 @@
   $role = $user[0][3];
   
 
+  $title = $_POST['title'] ?? null;
+  $algoDetails = $pdo->prepare('SELECT * FROM algorithm where title = :title');
+  $algoDetails->bindValue(':title',$title);
+  $algoDetails->execute();
+  $algo = $algoDetails->fetchAll();
+  $creator = $algo[0][0] ?? $email;
+  $category = $algo[0][3];
+  $description = $algo[0][4];
+  $time = $algo[0][5];
+  $space = $algo[0][6];
 
-  if(isset($_POST['addalgo'])){
-      $title = $_POST['title'];
+  if(isset($_POST['editalgo'])){
+      $title1 = $_POST['newTitle'];
       $description = $_POST['editor1'];
       $time = $_POST['time'];
       $space = $_POST['space'];
       $category = $_POST['category'];
 
-      $statement = $pdo->prepare("INSERT INTO algorithm (creator,role,title,category,description,time_complexity,space_complexity)
-                  VALUES (:creator,:role,:title,:category,:description,:time,:space)");
+      $statement = $pdo->prepare("UPDATE algorithm 
+      set creator = :creator,
+          role = :role,
+          title = :title,
+          category=:category,
+          description=:description,
+          time_complexity=:time,
+          space_complexity=:space
+      where title = :title");
       $statement->bindValue(':creator', $creator);
       $statement->bindValue(':role', $role);
-      $statement->bindValue(':title', $title);
+      $statement->bindValue(':title', $title1);
+      $statement->bindValue(':Oldtitle', $title);
       $statement->bindValue(':category', $category);
       $statement->bindValue(':description', $description);
       $statement->bindValue(':time', $time);
@@ -54,34 +72,36 @@
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Add Algorithm</h4>
+    <h4 class="text-center text-secondary">Edit Algorithm</h4>
         <form method="Post">
           <div class="form-group">
             <label for="title">Title
-              <input name="title" type="text" class="form-control">
+              <input name="newTitle" type="text" class="form-control" value="<?php echo $title ?>">
             </label>
           </div>
           <div class="form-group">
             <label for="body">Description</label>
-            <textarea name="editor1" class="form-control"></textarea>
+            <textarea name="editor1" class="form-control"><?php echo $description ?></textarea>
           </div>
           <div class="form-group">
             <label for="category">Category
-              <input name="category" type="text" class="form-control">
+              <input name="category" type="text" class="form-control"
+              value="<?php echo $category ?>">
             </label>
           </div>
           <div class="form-group">
             <label for="time">Time Complexity
-              <input name="time" type="text" class="form-control">
+              <input name="time" type="text" class="form-control"
+                value="<?php echo $time ?>">
             </label>
           </div>
           <div class="form-group">
             <label for="space">Space Complexity
-              <input name="space" type="text" class="form-control">
+              <input name="space" type="text" class="form-control" value="<?php echo $space ?>">
             </label>
           </div>
           <div class="form-group">
-            <button type="submit" name="addalgo" class="btn text-white btn-warning btn-block">Add</button>
+            <button type="submit" name="editalgo" class="btn text-white btn-warning btn-block">Submit</button>
           </div>
         </form>
   </div>  

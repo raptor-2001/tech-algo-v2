@@ -31,30 +31,30 @@
   if(isset($_POST['addalgo'])){
       $title = $_POST['title'];
       $description = $_POST['editor1'];
-      $time = $_POST['time'];
-      $space = $_POST['space'];
+      $system = $_POST['system'];
+      $invented = $_POST['invented'];
       $category = $_POST['category'];
 
-      $statement = $pdo->prepare("INSERT INTO algorithm (creator,role,title,category,description,time_complexity,space_complexity)
-                  VALUES (:creator,:role,:title,:category,:description,:time,:space)");
+      $statement = $pdo->prepare("INSERT INTO technologies (creator,role,title,description,system,invented,category)
+                  VALUES (:creator,:role,:title,:description,:system,:invented,:category)");
       $statement->bindValue(':creator', $creator);
       $statement->bindValue(':role', $role);
       $statement->bindValue(':title', $title);
       $statement->bindValue(':category', $category);
       $statement->bindValue(':description', $description);
-      $statement->bindValue(':time', $time);
-      $statement->bindValue(':space', $space);
+      $statement->bindValue(':system', $system);
+      $statement->bindValue(':invented', $invented);
       
   
       $statement->execute();
-      header("Location: ./algorithm.php");
+      header("Location: ./technology.php");
     
   }
 ?>
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Add Algorithm</h4>
+    <h4 class="text-center text-secondary">Add Technology</h4>
         <form method="Post">
           <div class="form-group">
             <label for="title">Title
@@ -71,13 +71,14 @@
             </label>
           </div>
           <div class="form-group">
-            <label for="time">Time Complexity
-              <input name="time" type="text" class="form-control">
+            <label for="system">System 
+              <span class="text-muted">(Linux/Windows/Mac/All)</span> 
+              <input name="system" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
-            <label for="space">Space Complexity
-              <input name="space" type="text" class="form-control">
+            <label for="space">Invented By
+              <input name="invented" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">

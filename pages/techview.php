@@ -30,15 +30,15 @@
 
 
   $title = $_POST['title'] ?? null;
-  $algoDetails = $pdo->prepare('SELECT * FROM algorithm where title = :title');
-  $algoDetails->bindValue(':title',$title);
-  $algoDetails->execute();
-  $algo = $algoDetails->fetchAll();
-  $creator = $algo[0][0];
-  $category = $algo[0][3];
-  $description = $algo[0][4];
-  $time = $algo[0][5];
-  $space = $algo[0][6];
+  $techDetails = $pdo->prepare('SELECT * FROM technologies where title = :title');
+  $techDetails->bindValue(':title',$title);
+  $techDetails->execute();
+  $tech = $techDetails->fetchAll();
+  $creator = $tech[0][0];
+  $category = $tech[0][6];
+  $description = $tech[0][3];
+  $system = $tech[0][4];
+  $invented = $tech[0][5];
 ?>
 
 
@@ -49,7 +49,7 @@
 <div class="container">
     <h4 class="text-center text-secondary"><?php echo $title?></h4>
     <?php if($role!="user") : ?>
-      <form method="post" action="edit.php">
+      <form method="post" action="techedit.php">
           <input  type="hidden" name="title" value="<?php echo $title?>"/>
           <button class="btn btn-warning text-white mb-5">Edit</button>
       </form>
@@ -74,26 +74,26 @@
           </td>
         </tr>
         <tr>
+          <th scope="row">Invented by</th>
+          <td colspan="3">
+            <p>
+              <?php echo "$invented"?>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">System</th>
+          <td colspan="3">
+            <p>
+              <?php echo "$system"?>
+            </p>
+          </td>
+        </tr>
+        <tr>
           <th scope="row">Description</th>
           <td colspan="3">
             <p>
               <?php echo "$description"?>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Time Complexity</th>
-          <td colspan="3">
-            <p>
-              <?php echo "$time"?>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Space Complexity</th>
-          <td colspan="3">
-            <p>
-              <?php echo "$space"?>
             </p>
           </td>
         </tr>

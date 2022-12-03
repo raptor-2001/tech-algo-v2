@@ -18,7 +18,7 @@
         <a class="nav-link" href="./pages/algorithm.php">Algorithms</a>
       </li>
       <li class="nav-item px-3">
-        <a class="nav-link" href="#">Technologies</a>
+        <a class="nav-link" href="./pages/technology.php">Technologies</a>
       </li>
       <li class="nav-item px-2">
         <a class="nav-link" href="./pages/userlogin.php">Profile</a>
