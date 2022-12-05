@@ -41,6 +41,16 @@
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
+  <h4 class="text-center text-secondary mb-3">Compare Algorithms</h4>
+    <form action="./algoCompare.php" method="POST">
+      <div class="form-group">
+        <input type="text" name="algo-1" class="form-control" placeholder="Enter title of first algorithm from below">
+      </div>
+      <div class="from-group">
+        <input type="text" name="algo-2" class="form-control mb-5" placeholder="Enter title of second algorithm from below">
+      </div>
+      <button type="submit" class="btn block btn-primary">Compare</button>
+    </form>
     <h4 class="text-center text-secondary">Algorithms Details</h4>
     <?php if(($role=='admin' || $role=='editor')) : ?>
       <form method="post" 
@@ -53,7 +63,7 @@
         
         >
           <button class="btn btn-danger mb-5">Add Algorithms</button>
-      </form>
+      </form >
     <?php endif; ?>
 
     <form action="" method="get">

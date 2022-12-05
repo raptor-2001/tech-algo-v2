@@ -24,7 +24,7 @@
   $userDetails->bindValue(':email',$email);
   $userDetails->execute();
   $user = $userDetails->fetchAll();
-  $creator = $user[0][2];
+ 
   $role = $user[0][3];
 
 
