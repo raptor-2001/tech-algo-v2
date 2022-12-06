@@ -39,6 +39,7 @@
   $description = $algo[0][4];
   $time = $algo[0][5];
   $space = $algo[0][6];
+  $code = $algo[0][7];
 
    
 
@@ -99,6 +100,14 @@
           <td colspan="3">
             <p>
               <?php echo "$space"?>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Code</th>
+          <td colspan="3">
+            <p>
+              <?php echo "$code"?>
             </p>
           </td>
         </tr>

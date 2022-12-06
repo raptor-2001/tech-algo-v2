@@ -30,13 +30,13 @@
 
   if(isset($_POST['addalgo'])){
       $title = $_POST['title'];
-      $description = $_POST['editor1'];
+      $description = $_POST['description'];
       $time = $_POST['time'];
       $space = $_POST['space'];
       $category = $_POST['category'];
-
-      $statement = $pdo->prepare("INSERT INTO algorithm (creator,role,title,category,description,time_complexity,space_complexity)
-                  VALUES (:creator,:role,:title,:category,:description,:time,:space)");
+      $code = $_POST['editor1'];
+      $statement = $pdo->prepare("INSERT INTO algorithm (creator,role,title,category,description,time_complexity,space_complexity,code)
+                  VALUES (:creator,:role,:title,:category,:description,:time,:space,:code)");
       $statement->bindValue(':creator', $creator);
       $statement->bindValue(':role', $role);
       $statement->bindValue(':title', $title);
@@ -44,6 +44,7 @@
       $statement->bindValue(':description', $description);
       $statement->bindValue(':time', $time);
       $statement->bindValue(':space', $space);
+      $statement->bindValue(':code', $code);
       
   
       $statement->execute();
@@ -54,17 +55,21 @@
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Add Algorithm</h4>
+    <h4 class="text-center text-secondary py-5">Add Algorithm</h4>
         <form method="Post">
           <div class="form-group">
             <label for="title">Title
               <input required name="title" type="text" class="form-control">
             </label>
           </div>
+
           <div class="form-group">
-            <label for="body">Description</label>
-            <textarea name="editor1" class="form-control"></textarea>
+            <label for="body">
+              Description
+            </label>
+            <textarea rows="5" cols="50" required name="description" class="form-control"></textarea>
           </div>
+          
           <div class="form-group">
             <label for="category">Category
               <input required name="category" type="text" class="form-control">
@@ -75,10 +80,16 @@
               <input required name="time" type="text" class="form-control">
             </label>
           </div>
+
           <div class="form-group">
             <label for="space">Space Complexity
               <input required name="space" type="text" class="form-control">
             </label>
+          </div>
+
+          <div class="form-group">
+            <label for="body">Source Code</label>
+            <textarea required name="editor1" class="form-control"></textarea>
           </div>
           <div class="form-group">
             <button type="submit" name="addalgo" class="btn text-white btn-warning btn-block">Add</button>

@@ -37,13 +37,15 @@
   $description = $algo[0][4];
   $time = $algo[0][5];
   $space = $algo[0][6];
+  $code = $algo[0][7];
 
   if(isset($_POST['editalgo'])){
       $title1 = $_POST['newTitle'];
-      $description = $_POST['editor1'];
+      $description = $_POST['description'];
       $time = $_POST['time'];
       $space = $_POST['space'];
       $category = $_POST['category'];
+      $code = $_POST['editor1'];
 
       $statement = $pdo->prepare("UPDATE algorithm 
       set creator = :creator,
@@ -52,7 +54,8 @@
           category=:category,
           description=:description,
           time_complexity=:time,
-          space_complexity=:space
+          space_complexity=:space,
+          code=:code
       where title = :title");
       $statement->bindValue(':creator', $creator);
       $statement->bindValue(':role', $role);
@@ -62,6 +65,7 @@
       $statement->bindValue(':description', $description);
       $statement->bindValue(':time', $time);
       $statement->bindValue(':space', $space);
+      $statement->bindValue(':code', $code);
       
   
       $statement->execute();
@@ -80,9 +84,12 @@
             </label>
           </div>
           <div class="form-group">
-            <label for="body">Description</label>
-            <textarea name="editor1" class="form-control"><?php echo $description ?></textarea>
+            <label for="body">
+              Description
+            </label>
+            <textarea rows="5" cols="50" required name="code" class="form-control"><?php echo $description ?></textarea>
           </div>
+          
           <div class="form-group">
             <label for="category">Category
               <input required name="category" type="text" class="form-control"
@@ -100,6 +107,12 @@
               <input required name="space" type="text" class="form-control" value="<?php echo $space ?>">
             </label>
           </div>
+
+          <div class="form-group">
+            <label for="body">Source Code</label>
+            <textarea name="editor1" class="form-control"><?php echo $code ?></textarea>
+          </div>
+          
           <div class="form-group">
             <button type="submit" name="editalgo" class="btn text-white btn-warning btn-block">Submit</button>
           </div>

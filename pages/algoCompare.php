@@ -23,6 +23,7 @@
   $description_1 = $algo_1[0][4];
   $time_1 = $algo_1[0][5];
   $space_1 = $algo_1[0][6];
+  $code_1 = $algo_1[0][7];
 
   
   
@@ -36,6 +37,8 @@
   $description_2 = $algo_2[0][4];
   $time_2 = $algo_2[0][5];
   $space_2 = $algo_2[0][6];
+  $code_2 = $algo_2[0][7];
+  
   
   
   ?>
@@ -71,6 +74,11 @@
           <th scope="row">Description</th>
           <td><?php echo $description_1 ?></td>
           <td><?php echo $description_2 ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Code</th>
+          <td><?php echo $code_1 ?></td>
+          <td><?php echo $code_2 ?></td>
         </tr>
       </tbody>
     </table>
