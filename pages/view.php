@@ -39,6 +39,9 @@
   $description = $algo[0][4];
   $time = $algo[0][5];
   $space = $algo[0][6];
+
+   
+
 ?>
 
 
@@ -47,12 +50,14 @@
 <?php include_once('../components/loginNav.php')?>
 
 <div class="container">
-    <h4 class="text-center text-secondary"><?php echo $title?></h4>
+    <h4 class="text-center text-secondary py-5"><?php echo $title?></h4>
     <?php if($role!="user") : ?>
-      <form method="post" action="edit.php">
-          <input  type="hidden" name="title" value="<?php echo $title?>"/>
-          <button class="btn btn-warning text-white mb-5">Edit</button>
-      </form>
+
+    <form method="post" action="./deleteAlgo.php">
+      <input  type="hidden" name="delete-title" value="<?php echo $title?>"/>
+      <button onclick="return confirm('Are you sure! want to delete <?php echo $title ?>?')" name="delete-algo" class="btn btn-danger text-white mb-5">Delete</button>
+    </form>
+       
     <?php else : ?>
       <h6 class="text-success"></h6>
     <?php endif; ?>
@@ -99,4 +104,21 @@
         </tr>
       </tbody>
     </table>
+    
+    <?php if($role!="user") : ?>
+
+      <form method="post" action="edit.php">
+        <input  type="hidden" name="title" value="<?php echo $title?>"/>
+        <button onclick="return confirm('Are you sure! want to edit <?php echo $title ?>?')" class="btn btn-block btn-warning text-white mb-5">Edit</button>
+      </form>
+
+    <?php else : ?>
+      <h6 class="text-success"></h6>
+    <?php endif; ?>
+     
   </div>
+  
+  <?php include_once('../components/footer.php');?>
+
+  
+  

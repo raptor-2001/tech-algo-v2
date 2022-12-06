@@ -25,9 +25,14 @@
   $user = $userDetails->fetchAll();
 ?>
 
+<style>
+  .extra-margin{
+    margin-bottom: 250px;
+  }
+</style>
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Profile Details</h4>
+    <h4 class="text-center text-secondary py-5">Profile Details</h4>
     <?php if(!$phone_number_verified) : ?>
       <form method="post" action="verification.php">
           <button class="btn btn-danger">Verify Phone Number</button>
@@ -56,3 +61,5 @@
       </form>
   </div>  
 <?php include_once('../components/header.php');?>
+<div class="extra-margin"></div>
+<?php include_once('../components/footer.php');?>

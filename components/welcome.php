@@ -16,15 +16,15 @@
 }
 
 .carousel-image-1{
-  background: url('/img/showcasebg.jpg');
+  background: url('./img/showcasebg.jpg');
   background-size: cover;
 }
 .carousel-image-2{
-  background: url('/img/showcasebg.jpg');
+  background: url('./img/showcasebg.jpg');
   background-size: cover;
 }
 .carousel-image-3{
-  background: url('/img/showcasebg.jpg');
+  background: url('./img/showcasebg.jpg');
   background-size: cover;
 }
 
@@ -46,7 +46,61 @@
   background: rgba(0, 0, 0, 0.7);
 }
 #showcase{
-  background-color: blueviolet;
+  background-color: #0597F2;
+  margin-top: -50;
+}
+
+#boxes{
+  background-color: #f4f4f4;
+}
+
+.card-1{
+  background-color: #F2B705;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-2{
+  background-color: #303030;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-3{
+  background-color: #F2B705;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-4{
+  background-color: #303030;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#about{
+  background-color: #F29F05;
+}
+
+#authors{
+  background-color: #f4f4f4;
+}
+
+.meet{
+  color: #F2B705;
+}
+.meet-p{
+  font-size: 16px !important;
+}
+
+#contact{
+  background-color: #0597F2;
+}
+
+.btn-md{
+  padding: 8px !important;
+  font-size: 15px !important;
 }
 
 </style>
@@ -61,28 +115,29 @@
       <div class="carousel-inner">
         <div class="carousel-item carousel-image-1 active">
           <div class="container">
-            <div class="carousel-caption d-none d-sm-block text-right mb-5">
-              <h1 class="display-3">Join Us</h1>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora accusamus maxime amet? Ullam nesciunt nulla unde minima in. Corporis?</p>
-              <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
+            <div class="carousel-caption d-none d-sm-block text-center mb-5 py-5">
+              <h1 class="display-3">Welcome</h1>
+              <p class="lead">Tech Algo is one of the fastest growing verified resource for mordern and old algorithms and technologies</p>
+              <a href="#" class="btn btn-md btn-danger btn-lg">About Us</a>
             </div>
           </div>
         </div>
         <div class="carousel-item carousel-image-2">
           <div class="container">
-            <div class="carousel-caption d-none d-sm-block mb-5">
-              <h1 class="display-3">Algorithms</h1>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora accusamus maxime amet? Ullam nesciunt nulla unde minima in. Corporis?</p>
-              <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+            <div class="carousel-caption d-none d-sm-block mb-5 text-right">
+              <h1 class="display-3">Algorithm</h1>
+              <p class="lead">In mathematics and computer science, an algorithm is a finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation</p>
+              <a href="#" class="btn btn-md btn-warning text-white
+             btn-lg">Learn More</a>
             </div>
           </div>
         </div>
         <div class="carousel-item carousel-image-3">
           <div class="container">
-            <div class="carousel-caption d-none d-sm-block text-right mb-5">
-              <h1 class="display-3">Technologies</h1>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora accusamus maxime amet? Ullam nesciunt nulla unde minima in. Corporis?</p>
-              <a href="#" class="btn btn-success btn-lg">Read More</a>
+            <div class="carousel-caption d-none d-sm-block text-left mb-5">
+              <h1 class="display-3">Technology</h1>
+              <p class="lead">Technology is the application of knowledge to reach practical goals in a specifiable and reproducible way. The word technology may also mean the product of such an endeavor.</p>
+              <a href="#" class="btn btn-md btn-success btn-lg">Read More</a>
             </div>
           </div>
         </div>
@@ -97,34 +152,34 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <div class="card text-center border-primary mb-resp">
+          <div class="card card-1 text-center mb-resp">
             <div class="card-body">
-              <div class="text-primary">Be Better</div>
-              <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+              <h5 class="text-white">Be Better</h5>
+              <p class="text-white">Good, better, best. Never let it rest. 'Til your good is better and your better is best</p>
             </div>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card text-center bg-primary text-white mb-resp">
+          <div class="card card-2 text-center  text-white mb-resp">
             <div class="card-body">
-              <div>Be Smarter</div>
-              <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+              <h5 class="text-white">Be Smarter</h5>
+              <p class="text-white">Success is a lousy teacher. It seduces smart people into thinking they can't lose.</p>
             </div>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card text-center border-primary mb-resp">
+          <div class="card card-3 text-center mb-resp">
             <div class="card-body">
-              <div class="text-primary">Be Faster</div>
-              <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+              <h5 class="text-white">Be Faster</h5>
+              <p class="text-white">If you fall behind, run faster. Never give up, rise up, try again and win</p>
             </div>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card text-center bg-primary text-white">
+          <div class="card text-center card-4">
             <div class="card-body">
-              <div>Be Stronger</div>
-              <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, laborum.</p>
+              <h5 class="text-white">Be Stronger</h5>
+              <p class="text-white">Everything you can learn from is an opportunity to become stronger.</p>
             </div>
           </div>
         </div>
@@ -133,17 +188,14 @@
   </section>
 
   <!-- ABOUT / WHY SECTION  -->
-  <section id="about" class="py-5 text-center bg-light">
+  <section id="about" class="py-5 text-center">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="info-header mb-5">
-            <h1 class="text-primary pb-3">
-              About This Website
-            </h1>
-            <p class="lead pb-3">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis aspernatur vel fugiat officia aperiam perspiciatis.
-            </p>
+            <h2 class="text-white pb-2">
+              ABOUT THIS WEBSITE
+            </h2>
           </div>
 
           <!-- ACCORDION -->
@@ -152,7 +204,7 @@
               <div class="card-header">
                 <h5 class="mb-0">
                   <div href="#collapse1" data-toggle="collapse" data-parent="#accordian">
-                    <i class="fas fa-arrow-circle-down"></i>Get Inspired
+                    <i class="fas fa-arrow-circle-down mr-2"></i>Why TECH-ALGO is created
                   </div>
                 </h5>
               </div>
@@ -175,7 +227,7 @@
               <div class="card-header">
                 <h5 class="mb-0">
                   <div href="#collapse2" data-toggle="collapse" data-parent="#accordian">
-                    <i class="fas fa-arrow-circle-down"></i>Gain Knowledge
+                    <i class="fas fa-arrow-circle-down mr-2"></i>Our Moto
                   </div>
                 </h5>
               </div>
@@ -198,7 +250,7 @@
               <div class="card-header">
                 <h5 class="mb-0">
                   <div href="#collapse3" data-toggle="collapse" data-parent="#accordian">
-                    <i class="fas fa-arrow-circle-down"></i>Open Your Mind  
+                    <i class="fas fa-arrow-circle-down mr-2"></i>Inspiration for TECH-ALGO 
                   </div>
                 </h5>
               </div>
@@ -222,16 +274,16 @@
   </section>
 
   <!-- AUTHORS -->
-  <section id="authors" class="my-5 text-center">
+  <section id="authors" class="text-center py-5">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="info-header mb-5">
-            <h1 class="text-primary pb-3">
+            <h2 class="meet pb-3">
               Meet Our Team
-            </h1>
+            </h2>
             <p class="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dicta illum libero nam magnam sequi?
+             The minds without whom the Tech-Algo wouldn't be possible. 
             </p>
           </div>
         </div>
@@ -239,110 +291,42 @@
 
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card card-shadow">
             <div class="card-body">
               <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-              <h3>Dr. A. J. Umbarkar</h3>
-              <h5 class="text-muted">Project Guide</h5>
+              <h4>Dr. A. J. Umbarkar</h4>
+              <h6 class="text-muted">Project Guide</h6>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
-              <div class="d-flex justify-content-center">
-                <div class="p-4">
-                  <a href="http://facebook.com">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://instagram.com">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://twitter.com">
-                    <i class="fab fa-twitter"></i>
-                  </a>  
-                </div>
-              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card card-shadow">
             <div class="card-body">
               <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-              <h3>Mr. Ankur Singh</h3>
-              <h5 class="text-muted">Team Lead</h5>
+              <h4>Ankur Singh</h4>
+              <h6 class="text-muted">Team Lead</h6>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
-              <div class="d-flex justify-content-center">
-                <div class="p-4">
-                  <a href="http://facebook.com">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://instagram.com">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://twitter.com">
-                    <i class="fab fa-twitter"></i>
-                  </a>  
-                </div>
-              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card card-shadow">
             <div class="card-body">
               <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-              <h3>Mr. Pratap Shingane</h3>
-              <h5 class="text-muted">Backend Developer</h5>
+              <h4>Pratap Shingane</h4>
+              <h6 class="text-muted">Backend Developer</h6>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
-              <div class="d-flex justify-content-center">
-                <div class="p-4">
-                  <a href="http://facebook.com">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://instagram.com">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://twitter.com">
-                    <i class="fab fa-twitter"></i>
-                  </a>  
-                </div>
-              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card">
+          <div class="card card-shadow">
             <div class="card-body">
               <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-              <h3>Mr. Pratham Yadav</h3>
-              <h5 class="text-muted">Front End Developer</h5>
+              <h4>Pratham Yadav</h4>
+              <h6 class="text-muted">Front End Developer</h6>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis cum tempora nobis, velit officiis.</p>
-              <div class="d-flex justify-content-center">
-                <div class="p-4">
-                  <a href="http://facebook.com">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://instagram.com">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-                <div class="p-4">
-                  <a href="http://twitter.com">
-                    <i class="fab fa-twitter"></i>
-                  </a>  
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -351,14 +335,14 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="bg-light py-5">
+  <section id="contact" class="py-5 text-white">
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <h3>Get In Touch</h3>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolores, voluptas aut distinctio officia fuga.</p>
+          <h2 class="pb-4">Get In Touch</h2>
+          <p>Contact us here, regarding any complaint or sugguestions.</p>
           <form>
-            <div class="input-group input-group-lg mb-3">
+            <div class="input-group input-group-md mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text">
                   <i class="fas fa-user"></i>
@@ -367,7 +351,7 @@
               <input type="text" class="form-control" placeholder="Name">
             </div>
 
-            <div class="input-group input-group-lg mb-3">
+            <div class="input-group input-group-md mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text">
                   <i class="fas fa-envelope"></i>
@@ -376,7 +360,7 @@
               <input type="text" class="form-control" placeholder="Email">
             </div>
 
-            <div class="input-group input-group-lg mb-3">
+            <div class="input-group input-group-md mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text">
                   <i class="fas fa-pencil-alt"></i>
@@ -384,7 +368,7 @@
               </div>
               <textarea class="form-control" placeholder="Message"></textarea>
             </div>
-              <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+              <input type="submit" value="Submit" class="btn btn-dark btn-block btn-lg">
           </form>
         </div>
         <div class="col-lg-3 align-self-center">
@@ -395,15 +379,13 @@
   </section>
 
   <!-- FOOTER -->
-  <footer id="main-footer" class="py-5 bg-primary text-white">
+  <footer id="main-footer" class="py-2 bg-dark text-white">
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-6 ml-auto">
-          <p class="lead">
-            Copyright &copy; <span id="year"></span>
-          </p>
-        </div>
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+       TECHO-ALGO Copyright &copy; <span id="year"></span>
       </div>
+    <!-- Copyright -->
     </div>
   </footer>
   <!-- Main Jquery -->

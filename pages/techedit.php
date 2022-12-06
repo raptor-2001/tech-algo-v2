@@ -72,11 +72,11 @@
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Edit technology</h4>
+    <h4 class="text-center text-secondary py-5">Edit technology</h4>
         <form method="Post">
           <div class="form-group">
             <label for="title">Title
-              <input name="newTitle" type="text" class="form-control" value="<?php echo $title ?>">
+              <input required name="newTitle" type="text" class="form-control" value="<?php echo $title ?>">
             </label>
           </div>
           <div class="form-group">
@@ -85,18 +85,18 @@
           </div>
           <div class="form-group">
             <label for="category">Category
-              <input value="<?php echo $category ?>" name="category" type="text" class="form-control">
+              <input required value="<?php echo $category ?>" name="category" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
             <label for="system">System 
               <span class="text-muted">(Linux/Windows/Mac/All)</span> 
-              <input value="<?php echo $system ?>" name="system" type="text" class="form-control">
+              <input required value="<?php echo $system ?>" name="system" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
             <label for="space">Invented By
-              <input value="<?php echo $invented ?>" name="invented" type="text" class="form-control">
+              <input required value="<?php echo $invented ?>" name="invented" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
@@ -105,6 +105,7 @@
         </form>
   </div>  
 <?php include_once('../components/header.php');?>
+<?php include_once('../components/footer.php');?>
 
 <!-- Main Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

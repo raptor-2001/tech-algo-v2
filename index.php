@@ -3,13 +3,10 @@
   include_once('dbcon.php');
  ?>
  
- <?php include_once('./components/header.php') ?>
- 
- 
-
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+<?php include_once('./components/header.php') ?>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container">
-    <h4 class="navbar-brand" href="./pages/userlogin.php">Tech Algo</h4>
+    <h4 class="navbar-brand" href="./pages/userlogin.php">TECH-ALGO</h4>
     <ul class="navbar-nav px-10">
       <li class="nav-item px-3">
         <a class="nav-link" href="#">Home</a>
@@ -25,13 +22,8 @@
       </li>
     </ul>
     <form action="./pages/userLogin.php">
-      <button class="btn btn-success">Sign In</button>
+      <button class="btn btn-success mt-1">LOGIN</button>
     </form>
   </div>
-</nav>
-
-<section>
-
-
-  
-  <?php include_once('./components/welcome.php')?>
+</nav>  
+<?php include_once('./components/welcome.php')?>

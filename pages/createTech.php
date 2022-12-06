@@ -54,11 +54,11 @@
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Add Technology</h4>
+    <h4 class="text-center text-secondary py-5">Add Technology</h4>
         <form method="Post">
           <div class="form-group">
             <label for="title">Title
-              <input name="title" type="text" class="form-control">
+              <input required name="title" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
@@ -67,18 +67,18 @@
           </div>
           <div class="form-group">
             <label for="category">Category
-              <input name="category" type="text" class="form-control">
+              <input required name="category" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
             <label for="system">System 
               <span class="text-muted">(Linux/Windows/Mac/All)</span> 
-              <input name="system" type="text" class="form-control">
+              <input required name="system" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
             <label for="space">Invented By
-              <input name="invented" type="text" class="form-control">
+              <input required name="invented" type="text" class="form-control">
             </label>
           </div>
           <div class="form-group">
@@ -87,6 +87,7 @@
         </form>
   </div>  
 <?php include_once('../components/header.php');?>
+<?php include_once('../components/footer.php');?>
 
 <!-- Main Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

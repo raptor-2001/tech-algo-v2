@@ -38,7 +38,7 @@
     <hr/>
     <div class="container">
       <label for="uname"><strong>Phone Number</strong></label>
-      <input type="text" id="number" placeholder="Enter phone number" name="uname" required>
+      <input required type="text" id="number" placeholder="Enter phone number" name="uname" required>
     </div>
     <div id="recaptcha-container"></div>
     <button type="button" name="send" onclick="phoneAuth();">Send Otp</button>
@@ -48,13 +48,13 @@
     <div class="formcontainer">
     <hr/>
     <div class="container">
-    <input type="text" id="verificationCode" placeholder="Enter verification code" required>
+    <input required type="text" id="verificationCode" placeholder="Enter verification code" required>
     
     </div>
   
     <button type="button" name="verified" onclick="codeverify();">Verify code</button>
  
-    <input class="text-danger text-center" name="verified_text" type="text" value="Phone Number Unverified" id="verified">
+    <input required class="text-danger text-center" name="verified_text" type="text" value="Phone Number Unverified" id="verified">
     <button id="home" name="home" class="btn btn-primary d-none" type="submit">Go to home</button> 
 
   </form>
@@ -131,3 +131,5 @@
   </script>
 </body>
 </html>
+
+<?php include_once('../components/footer.php');?>

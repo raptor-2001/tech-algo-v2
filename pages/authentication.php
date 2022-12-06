@@ -16,7 +16,7 @@
     } catch (InvalidToken $e) {
       echo 'The token is invalid: '.$e->getMessage();
       $_SESSION['status'] = "Token Invalid/Expired Login Again";
-      header("Location: logut.php");
+      header("Location: logout.php");
       exit();
     } catch (\InvalidArgumentException $e){
       echo "The token could not be parsed: ".$e->getMessage();

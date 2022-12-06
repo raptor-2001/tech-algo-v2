@@ -85,11 +85,11 @@ use Firebase\Auth\Token\Exception\InvalidToken;
           <form method="POST">
             
             <div class="form-group">
-                <input type="email" placeholder="Enter Email" class="form-control" name='email'>
+                <input required type="email" placeholder="Enter Email" class="form-control" name='email'>
             </div>
             
             <div class="form-group">
-              <input type="password" placeholder="Enter Password" class="form-control" name='password'>
+              <input required type="password" placeholder="Enter Password" class="form-control" name='password'>
             </div>
             
             <div class="form-group">
@@ -113,3 +113,4 @@ use Firebase\Auth\Token\Exception\InvalidToken;
 </section>
 
 <?php include_once('../components/header.php');?>
+<?php include_once('../components/footer.php');?>

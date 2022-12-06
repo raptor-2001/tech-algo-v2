@@ -41,7 +41,7 @@
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary py-5">Technologies Details</h4>
+    <h4 class="text-center text-secondary">Technologies Details</h4>
     <?php if(($role=='admin' || $role=='editor')) : ?>
       <form method="post" 
         action=
@@ -52,7 +52,7 @@
         <?php endif; ?>
         
         >
-          <button class="btn text-white btn-warning mb-5">Add Technology</button>
+          <button class="btn text-white btn-warning mb-5">Add Technologies</button>
       </form>
     <?php endif; ?>
 
@@ -93,4 +93,3 @@
     </table>
   </div>  
 <?php include_once('../components/header.php');?>
-<?php include_once('../components/footer.php');?>

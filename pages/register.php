@@ -39,16 +39,16 @@ include_once('../components/header.php');
         <div class="card-body ">
           <form method="POST" action="../code.php">
             <div class="form-group">
-              <input type="text" placeholder="Enter Full Name" class="form-control" name='name'>
+              <input required type="text" placeholder="Enter Full Name" class="form-control" name='name'>
             </div>
             <div class="form-group">
-              <input type="number" placeholder="Enter Phone Number" class="form-control" name='phone-number'>
+              <input required type="number" placeholder="Enter Phone Number" class="form-control" name='phone-number'>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Enter Email" class="form-control" name='email'>
+              <input required type="email" placeholder="Enter Email" class="form-control" name='email'>
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Enter Password" class="form-control" name='password'>
+              <input required type="password" placeholder="Enter Password" class="form-control" name='password'>
             </div>
             <div class="form-group">
               <label class="form-label" for="role">Choose your account type</label>
@@ -69,3 +69,4 @@ include_once('../components/header.php');
 </section>
 
 <?php include_once('../components/header.php');?>
+<?php include_once('../components/footer.php');?>

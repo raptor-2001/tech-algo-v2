@@ -39,19 +39,22 @@
 
 ?>
 
+
+
 <?php include_once('../components/loginNav.php')?>
+
   <div class="container">
-  <h4 class="text-center text-secondary mb-3">Compare Algorithms</h4>
+  <h4 class="text-center text-secondary py-5">Compare Algorithms</h4>
     <form action="./algoCompare.php" method="POST">
       <div class="form-group">
-        <input type="text" name="algo-1" class="form-control" placeholder="Enter title of first algorithm from below">
+        <input required type="text" name="algo-1" class="form-control" placeholder="Enter title of first algorithm from below">
       </div>
       <div class="from-group">
-        <input type="text" name="algo-2" class="form-control mb-5" placeholder="Enter title of second algorithm from below">
+        <input required type="text" name="algo-2" class="form-control mb-5" placeholder="Enter title of second algorithm from below">
       </div>
       <button type="submit" class="btn block btn-primary">Compare</button>
     </form>
-    <h4 class="text-center text-secondary">Algorithms Details</h4>
+    <h4 class="text-center text-secondary py-5">Algorithms Details</h4>
     <?php if(($role=='admin' || $role=='editor')) : ?>
       <form method="post" 
         action=
@@ -62,13 +65,13 @@
         <?php endif; ?>
         
         >
-          <button class="btn btn-danger mb-5">Add Algorithms</button>
+          <button class="btn btn-danger mb-5">Add Algorithm</button>
       </form >
     <?php endif; ?>
 
     <form action="" method="get">
         <div class="input-group mb-3">
-          <input type="text" name="search" class="form-control" placeholder="Search" value="<?php echo $keyword ?>">
+          <input required type="text" name="search" class="form-control" placeholder="Search" value="<?php echo $keyword ?>">
           <div class="input-group-append">
             <button class="btn btn-success" type="submit">Search</button>
           </div>
@@ -103,3 +106,4 @@
     </table>
   </div>  
 <?php include_once('../components/header.php');?>
+<?php include_once('../components/footer.php');?>

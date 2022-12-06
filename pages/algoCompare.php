@@ -41,7 +41,7 @@
   ?>
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-  <h4 class="text-center text-secondary mb-3">Comparison Table</h4>
+  <h4 class="text-center text-secondary mb-3 py-5">Comparison Table</h4>
   <div class="table-responsive">
     <table class="table table-striped text-successtable-border border-light">
       <thead class="border-light">

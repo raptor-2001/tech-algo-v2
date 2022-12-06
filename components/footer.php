@@ -1,3 +1,16 @@
+
+
+<footer id="main-footer" class="py-2 bg-dark text-white">
+    <div class="container">
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+       TECHO-ALGO Copyright &copy; <span id="year"></span>
+      </div>
+    <!-- Copyright -->
+    </div>
+  </footer>
+
+
 <!-- Main Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 

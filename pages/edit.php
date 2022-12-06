@@ -72,11 +72,11 @@
 
 <?php include_once('../components/loginNav.php')?>
   <div class="container">
-    <h4 class="text-center text-secondary">Edit Algorithm</h4>
+    <h4 class="text-center text-secondary py-5">Edit Algorithm</h4>
         <form method="Post">
           <div class="form-group">
             <label for="title">Title
-              <input name="newTitle" type="text" class="form-control" value="<?php echo $title ?>">
+              <input required name="newTitle" type="text" class="form-control" value="<?php echo $title ?>">
             </label>
           </div>
           <div class="form-group">
@@ -85,19 +85,19 @@
           </div>
           <div class="form-group">
             <label for="category">Category
-              <input name="category" type="text" class="form-control"
+              <input required name="category" type="text" class="form-control"
               value="<?php echo $category ?>">
             </label>
           </div>
           <div class="form-group">
             <label for="time">Time Complexity
-              <input name="time" type="text" class="form-control"
+              <input required name="time" type="text" class="form-control"
                 value="<?php echo $time ?>">
             </label>
           </div>
           <div class="form-group">
             <label for="space">Space Complexity
-              <input name="space" type="text" class="form-control" value="<?php echo $space ?>">
+              <input required name="space" type="text" class="form-control" value="<?php echo $space ?>">
             </label>
           </div>
           <div class="form-group">
@@ -106,6 +106,7 @@
         </form>
   </div>  
 <?php include_once('../components/header.php');?>
+<?php include_once('../components/footer.php');?>
 
 <!-- Main Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
