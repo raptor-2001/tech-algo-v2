@@ -54,11 +54,18 @@
     <h4 class="text-center text-secondary py-5"><?php echo $title?></h4>
     <?php if($role!="user") : ?>
 
-    <form method="post" action="./deleteAlgo.php">
-      <input  type="hidden" name="delete-title" value="<?php echo $title?>"/>
-      <button onclick="return confirm('Are you sure! want to delete <?php echo $title ?>?')" name="delete-algo" class="btn btn-danger text-white mb-5">Delete</button>
-    </form>
-       
+      <form method="post" 
+        action=
+        <?php if($phone_number_verified):?>
+          <?php echo "./deleteAlgo.php"?>
+        <?php else:?>
+          <?php echo "verification.php"?>
+        <?php endif; ?>
+        
+        >
+        <input  type="hidden" name="delete-title" value="<?php echo $title?>"/>
+        <button onclick="return confirm('Are you sure! want to delete <?php echo $title ?>?')" name="delete-algo" class="btn btn-danger text-white mb-5">Delete</button>
+      </form >
     <?php else : ?>
       <h6 class="text-success"></h6>
     <?php endif; ?>
@@ -116,11 +123,19 @@
     
     <?php if($role!="user") : ?>
 
-      <form method="post" action="edit.php">
+
+      <form method="post" 
+        action=
+        <?php if($phone_number_verified):?>
+          <?php echo "./edit.php"?>
+        <?php else:?>
+          <?php echo "verification.php"?>
+        <?php endif; ?>
+        
+        >
         <input  type="hidden" name="title" value="<?php echo $title?>"/>
         <button onclick="return confirm('Are you sure! want to edit <?php echo $title ?>?')" class="btn btn-block btn-warning text-white mb-5">Edit</button>
-      </form>
-
+        </form >
     <?php else : ?>
       <h6 class="text-success"></h6>
     <?php endif; ?>
